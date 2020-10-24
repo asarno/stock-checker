@@ -34,11 +34,10 @@ const Stock: React.FC<Props> = ({ symbol }) => {
 
     if (isLoading) {
         return (
-
             <Loader isLoading />
         )
     }
-    console.log('woo', JSON.stringify(data, null, 2))
+
     return (
         <Container
             className="animated fadeIn"
