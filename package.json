@@ -2,7 +2,7 @@
   "name": "stock-ticker",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://asarno.github.io",
+  "homepage": "https://asarno.github.io/stock-checker",
   "dependencies": {
     "@emotion/core": "^10.0.35",
     "@material-ui/core": "^4.11.0",
