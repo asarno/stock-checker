@@ -24,8 +24,18 @@ const FlexColumn = styled.div`
     flex-direction: column;
 `;
 
+const Link = styled.span`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #007aff;
+    cursor: pointer;
+    margin: 1rem;
+`;
+
 export {
     FlexRow,
     FlexColumn,
     Container,
+    Link,
 }

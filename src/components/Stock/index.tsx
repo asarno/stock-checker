@@ -28,15 +28,20 @@ interface Props {
 }
 
 const Stock: React.FC<Props> = ({ symbol }) => {
-    const { isValid, data } = useStock(symbol);
+    const { isValid, data, error } = useStock(symbol);
     const isMobile = useIsMobile();
     const isLoading = !data;
 
+    if (error) {
+        return <span>API Limit Reached, please wait 1 minute (only 5 per minute are available).</span>
+    }
+    
     if (isLoading) {
         return (
             <Loader isLoading />
         )
     }
+
 
     return (
         <Container

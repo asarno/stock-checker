@@ -1,24 +1,22 @@
-import React, { useState } from 'react';
-import { Container } from './styled';
-import Stock from './Stock';
-import Search from './Search';
+import React from 'react';
+import Home from './Home';
+import NotFound from './NotFound';
 
-const initialState = { symbol: '', name: '' };
+import {
+	Route,
+	Switch,
+	BrowserRouter as Router,
+} from 'react-router-dom';
 
 function App() {
-  const [stock, setSelectedStock] = useState(initialState);
-
-  return (
-    <Container>
-
-      <Search
-        setSelectedStock={setSelectedStock}
-      />
-
-      {stock.symbol !== '' && <Stock symbol={stock.symbol} />}
-
-    </Container>
-  );
+    return (
+        <Router>
+            <Switch>
+                <Route exact path="/" component={Home} />
+                <Route component={NotFound} />
+            </Switch>
+        </Router>
+    );
 }
 
 export default App;

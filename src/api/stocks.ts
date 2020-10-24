@@ -57,7 +57,7 @@ export async function getInfo(symbol: string) {
     assert.equal(status, 200);
 
     if (data.Note) {
-       alert('🦄 limited to 5 API calls a minute')
+        throw Error("API Limit Reached, please wait 1 minute (only 5 per minute are available).")
     }
 
     return {
